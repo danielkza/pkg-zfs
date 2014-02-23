@@ -147,6 +147,7 @@ override_dh_makeshlibs:
 ifeq ($(BUILD_UDEB), true)
 	dh_makeshlibs -plibnvpair$(SHLIB_MAJOR) --add-udeb=libnvpair$(SHLIB_MAJOR)-udeb
 	dh_makeshlibs -plibuutil$(SHLIB_MAJOR) --add-udeb=libuutil$(SHLIB_MAJOR)-udeb
+	dh_makeshlibs -plibzfs_core$(SHLIB_MAJOR) --add-udeb=libzfs_core$(SHLIB_MAJOR)-udeb
 	dh_makeshlibs -plibzfs$(SHLIB_MAJOR) --add-udeb=libzfs$(SHLIB_MAJOR)-udeb
 	dh_makeshlibs -plibzpool$(SHLIB_MAJOR) --add-udeb=libzpool$(SHLIB_MAJOR)-udeb
 	dh_makeshlibs -pzfsutils --add-udeb=zfsutils-udeb

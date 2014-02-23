@@ -1,11 +1,11 @@
 diff --git a/lib/libzfs/Makefile.am b/lib/libzfs/Makefile.am
-index 524efaa..8b472d2 100644
+index 8b1f517..3661ded 100644
 --- a/lib/libzfs/Makefile.am
 +++ b/lib/libzfs/Makefile.am
-@@ -22,8 +22,11 @@ libzfs_la_SOURCES = \
- 	$(top_srcdir)/lib/libzfs/libzfs_util.c
+@@ -23,8 +23,11 @@ libzfs_la_SOURCES = \
  
  libzfs_la_LIBADD = \
+ 	$(top_builddir)/lib/libzfs_core/libzfs_core.la \
 +	$(top_builddir)/lib/libavl/libavl.la \
 +	$(top_builddir)/lib/libefi/libefi.la \
  	$(top_builddir)/lib/libshare/libshare.la \
@@ -13,4 +13,4 @@ index 524efaa..8b472d2 100644
 +	$(top_builddir)/lib/libuutil/libuutil.la \
  	$(top_builddir)/lib/libzpool/libzpool.la
  
- libzfs_la_LDFLAGS = -lm -ldl -version-info 1:1:0 $(LIBSELINUX)
+ libzfs_la_LIBADD += -lm -ldl $(LIBBLKID)

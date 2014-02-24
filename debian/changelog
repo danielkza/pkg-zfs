@@ -1,3 +1,30 @@
+zfs-linux (0.6.2-4~wheezy) wheezy; urgency=low
+
+  * Be smarter about how we find the kernel source directory for dkms.
+
+ -- Turbo Fredriksson <turbo@debian.org>  Fri, 03 Jan 2014 10:51:20 +0100
+
+zfs-linux (0.6.2-3) wheezy; urgency=low
+
+  * Include the /etc/modprobe.d/{spl,zfs} files in the initrd if they exist.
+  * Don't load all crypto keys keys if booting on encrypted bootfs, just the
+    bootfs one (recursivly).
+
+ -- Turbo Fredriksson <turbo@debian.org>  Wed, 01 Jan 2014 12:12:13 +0100
+
+zfs-linux (0.6.2-2) wheezy; urgency=low
+
+  * Add 'file' as dependency to 'zfs-dkms'.
+    Closes: https://github.com/zfsonlinux/zfs/issues/1755
+
+ -- Turbo Fredriksson <turbo@debian.org>  Tue, 15 Oct 2013 13:58:24 +0200
+
+zfs-linux (0.6.2-1) wheezy; urgency=low
+
+  * New Release
+
+ -- Turbo Fredriksson <turbo@debian.org>  Wed, 11 Sep 2013 02:58:57 +0200
+
 zfs-linux (0.6.1-1~wheezy) wheezy; urgency=low
 
   * Initial release.
